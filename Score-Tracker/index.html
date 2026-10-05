@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchPoint | Score Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div>
+                <p class="eyebrow">LIVE SCOREBOARD</p>
+                <h1>Match<span>Point</span></h1>
+            </div>
+
+            <div class="match-badge">
+                <span></span>
+                LIVE MATCH
+            </div>
+        </header>
+
+        <section class="scoreboard">
+
+            <div class="player-card player-one">
+                <div class="player-top">
+                    <div class="player-number">01</div>
+                    <p>PLAYER ONE</p>
+                </div>
+
+                <h2>Player One</h2>
+
+                <div class="score" id="playerOneScore">0</div>
+
+                <div class="score-controls">
+                    <button id="playerOneDecrease" class="minus">−</button>
+                    <button id="playerOneIncrease" class="plus">+1</button>
+                </div>
+            </div>
+
+            <div class="versus">
+                <span>VS</span>
+            </div>
+
+            <div class="player-card player-two">
+                <div class="player-top">
+                    <div class="player-number">02</div>
+                    <p>PLAYER TWO</p>
+                </div>
+
+                <h2>Player Two</h2>
+
+                <div class="score" id="playerTwoScore">0</div>
+
+                <div class="score-controls">
+                    <button id="playerTwoDecrease" class="minus">−</button>
+                    <button id="playerTwoIncrease" class="plus">+1</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="match-status">
+
+            <div class="status-indicator">
+                <span></span>
+                MATCH STATUS
+            </div>
+
+            <h3 id="matchStatus">Match in progress</h3>
+
+            <button id="resetMatch" class="reset-button">
+                Reset Match
+            </button>
+
+        </section>
+
+        <footer>
+            <p>MatchPoint Score Tracker</p>
+            <p>Two Player Mode</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

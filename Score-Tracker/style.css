@@ -1,0 +1,430 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f0;
+    color: #11120f;
+}
+
+/* App */
+
+.app {
+    width: min(1200px, 100%);
+    min-height: 100vh;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #d6d8d1;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+    color: #74776f;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.header h1 {
+    font-size: 38px;
+    letter-spacing: -2px;
+}
+
+.header h1 span {
+    color: #2f6bff;
+}
+
+.match-badge {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 15px;
+    border: 1px solid #d6d8d1;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #555951;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.match-badge span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3acb72;
+}
+
+/* Scoreboard */
+
+.scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-top: 55px;
+}
+
+/* Player Cards */
+
+.player-card {
+    min-height: 430px;
+    padding: 35px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.player-one {
+    background: #111827;
+    color: #ffffff;
+}
+
+.player-two {
+    background: #ffffff;
+    color: #11120f;
+    border: 1px solid #d7d9d2;
+}
+
+.player-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-top p {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.player-one .player-top p {
+    color: #8f9aab;
+}
+
+.player-two .player-top p {
+    color: #858980;
+}
+
+.player-number {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.player-one .player-number {
+    color: #5f82ff;
+}
+
+.player-two .player-number {
+    color: #2f6bff;
+}
+
+.player-card h2 {
+    margin-top: 45px;
+    font-size: 25px;
+}
+
+.score {
+    margin: 5px 0 20px;
+    font-size: clamp(110px, 15vw, 180px);
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: -10px;
+}
+
+.player-one .score {
+    color: #ffffff;
+}
+
+.player-two .score {
+    color: #151711;
+}
+
+/* Controls */
+
+.score-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.score-controls button {
+    height: 54px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.minus {
+    width: 54px;
+}
+
+.plus {
+    flex: 1;
+}
+
+.player-one .minus {
+    background: #202b3f;
+    color: #ffffff;
+}
+
+.player-one .plus {
+    background: #2f6bff;
+    color: #ffffff;
+}
+
+.player-two .minus {
+    background: #eef0eb;
+    color: #292c27;
+}
+
+.player-two .plus {
+    background: #111827;
+    color: #ffffff;
+}
+
+.score-controls button:hover {
+    transform: translateY(-2px);
+}
+
+.player-one .plus:hover {
+    background: #467cff;
+}
+
+.player-two .plus:hover {
+    background: #252e3f;
+}
+
+.player-one .minus:hover {
+    background: #2b3951;
+}
+
+.player-two .minus:hover {
+    background: #e2e5df;
+}
+
+/* Versus */
+
+.versus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.versus span {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #2f6bff;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    box-shadow: 0 12px 30px rgba(47, 107, 255, 0.25);
+}
+
+/* Match Status */
+
+.match-status {
+    margin-top: 30px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid #d7d9d2;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #777b73;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.status-indicator span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2f6bff;
+}
+
+.match-status h3 {
+    flex: 1;
+    font-size: 15px;
+}
+
+.reset-button {
+    padding: 12px 20px;
+    border: 1px solid #d5d8d0;
+    border-radius: 10px;
+    background: #f4f5f2;
+    color: #20231e;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.reset-button:hover {
+    background: #111827;
+    color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 40px;
+    color: #858980;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+
+    .app {
+        padding: 30px 25px;
+    }
+
+    .scoreboard {
+        grid-template-columns: 1fr 50px 1fr;
+        gap: 10px;
+    }
+
+    .player-card {
+        min-height: 390px;
+        padding: 25px;
+    }
+
+    .score {
+        font-size: 110px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .app {
+        padding: 22px 18px;
+    }
+
+    .header {
+        padding-bottom: 25px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .match-badge {
+        display: none;
+    }
+
+    .scoreboard {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .player-card {
+        width: 100%;
+        min-height: 330px;
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .player-card h2 {
+        margin-top: 30px;
+    }
+
+    .score {
+        margin: 20px 0;
+        font-size: 105px;
+    }
+
+    .versus {
+        margin: -5px 0;
+        z-index: 2;
+    }
+
+    .versus span {
+        width: 42px;
+        height: 42px;
+        font-size: 9px;
+    }
+
+    .match-status {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .match-status h3 {
+        width: 100%;
+        flex: none;
+        order: 3;
+    }
+
+    .reset-button {
+        margin-left: auto;
+    }
+
+    footer {
+        padding-top: 30px;
+        font-size: 8px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+
+    .player-card {
+        min-height: 300px;
+        padding: 20px;
+    }
+
+    .score {
+        font-size: 90px;
+    }
+
+    .player-card h2 {
+        font-size: 21px;
+    }
+}
