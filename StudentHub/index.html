@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub | Student Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+
+            <a href="#" class="logo">
+                <span>SH</span>
+                StudentHub
+            </a>
+
+            <nav>
+                <a href="#" class="active">
+                    <span>01</span>
+                    Dashboard
+                </a>
+
+                <a href="#students">
+                    <span>02</span>
+                    Students
+                </a>
+
+                <a href="#add-student">
+                    <span>03</span>
+                    Add Student
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>Student Management</p>
+                <span>2026</span>
+            </div>
+
+        </aside>
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">STUDENT ADMINISTRATION</p>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">AD</div>
+
+                    <div>
+                        <strong>Administrator</strong>
+                        <span>Student Manager</span>
+                    </div>
+                </div>
+
+            </header>
+
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">01</div>
+
+                    <div>
+                        <p>Total Students</p>
+                        <h2 id="studentCount">0</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">02</div>
+
+                    <div>
+                        <p>Available Courses</p>
+                        <h2>5</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">03</div>
+
+                    <div>
+                        <p>Academic Year</p>
+                        <h2>2026</h2>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="content-grid">
+
+                <div class="panel add-panel" id="add-student">
+
+                    <div class="panel-heading">
+                        <div>
+                            <p class="section-label">NEW RECORD</p>
+                            <h2>Add Student</h2>
+                        </div>
+
+                        <span class="panel-number">01</span>
+                    </div>
+
+                    <form id="studentForm">
+
+                        <div class="form-group">
+                            <label for="name">Student Name</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter student name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="age">Age</label>
+
+                                <input
+                                    type="number"
+                                    id="age"
+                                    placeholder="Age"
+                                    min="1"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="course">Course</label>
+
+                                <select id="course" required>
+                                    <option value="">Select course</option>
+                                    <option value="Software Engineering">
+                                        Software Engineering
+                                    </option>
+                                    <option value="Web Development">
+                                        Web Development
+                                    </option>
+                                    <option value="Data Science">
+                                        Data Science
+                                    </option>
+                                    <option value="UI/UX Design">
+                                        UI/UX Design
+                                    </option>
+                                    <option value="Cybersecurity">
+                                        Cybersecurity
+                                    </option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="student@example.com"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="add-button">
+                            Add Student
+                            <span>+</span>
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="panel students-panel" id="students">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <p class="section-label">STUDENT DIRECTORY</p>
+                            <h2>Students</h2>
+                        </div>
+
+                        <span class="student-total" id="studentTotal">
+                            0 Students
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="students-list"
+                        id="studentsList"
+                    ></div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
