@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CreateAccount | Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="registration-page">
+
+        <section class="brand-panel">
+
+            <div class="brand-content">
+
+                <a href="#" class="logo">
+                    <span class="logo-mark">C</span>
+                    CreateAccount
+                </a>
+
+                <div class="brand-message">
+
+                    <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+
+                    <h1>
+                        Build your
+                        <span>digital identity.</span>
+                    </h1>
+
+                    <p>
+                        Create your account and unlock a simple,
+                        secure experience designed around you.
+                    </p>
+
+                </div>
+
+                <div class="brand-features">
+
+                    <div class="feature">
+                        <span>01</span>
+                        <div>
+                            <strong>Simple setup</strong>
+                            <p>Create your account in minutes.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span>02</span>
+                        <div>
+                            <strong>Secure by design</strong>
+                            <p>Your information stays protected.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span>03</span>
+                        <div>
+                            <strong>Ready to explore</strong>
+                            <p>Get started immediately after signup.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="brand-footer">
+                <span>CREATEACCOUNT</span>
+                <span>2026</span>
+            </div>
+
+        </section>
+
+        <section class="form-panel">
+
+            <div class="form-container">
+
+                <div class="form-header">
+
+                    <p class="eyebrow">GET STARTED</p>
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Fill in your details to create your account.
+                    </p>
+
+                </div>
+
+                <form id="registrationForm" novalidate>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label for="firstName">First Name</label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="John"
+                            >
+
+                            <small id="firstNameError"></small>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="lastName">Last Name</label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Doe"
+                            >
+
+                            <small id="lastNameError"></small>
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="john@example.com"
+                        >
+
+                        <small id="emailError"></small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="+234 800 000 0000"
+                        >
+
+                        <small id="phoneError"></small>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label for="password">Password</label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Minimum 8 characters"
+                            >
+
+                            <small id="passwordError"></small>
+
+                            <div class="password-strength">
+                                <div class="strength-top">
+                                    <span>Password strength</span>
+                                    <strong id="strengthText">—</strong>
+                                </div>
+
+                                <div class="strength-bar">
+                                    <span id="strengthBar"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="confirmPassword">
+                                Confirm Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Repeat password"
+                            >
+
+                            <small id="confirmPasswordError"></small>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+                            <label for="dateOfBirth">
+                                Date of Birth
+                            </label>
+
+                            <input
+                                type="date"
+                                id="dateOfBirth"
+                            >
+
+                            <small id="dateOfBirthError"></small>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="country">Country</label>
+
+                            <select id="country">
+                                <option value="">
+                                    Select country
+                                </option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="South Africa">
+                                    South Africa
+                                </option>
+                                <option value="United Kingdom">
+                                    United Kingdom
+                                </option>
+                                <option value="United States">
+                                    United States
+                                </option>
+                                <option value="Canada">Canada</option>
+                            </select>
+
+                            <small id="countryError"></small>
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Gender</label>
+
+                        <div class="gender-options">
+
+                            <label class="gender-option">
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Male"
+                                >
+                                <span>Male</span>
+                            </label>
+
+                            <label class="gender-option">
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Female"
+                                >
+                                <span>Female</span>
+                            </label>
+
+                            <label class="gender-option">
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Other"
+                                >
+                                <span>Other</span>
+                            </label>
+
+                        </div>
+
+                        <small id="genderError"></small>
+
+                    </div>
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                            and
+                            <a href="#">Privacy Policy</a>.
+                        </span>
+
+                    </label>
+
+                    <small id="termsError" class="terms-error"></small>
+
+                    <button
+                        type="submit"
+                        class="register-button"
+                    >
+                        Create Account
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+                <div
+                    class="success-message"
+                    id="successMessage"
+                >
+                    <div class="success-icon">✓</div>
+
+                    <div>
+                        <strong>Registration Successful!</strong>
+
+                        <p>
+                            Your account has been created successfully.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="login-text">
+                    Already have an account?
+                    <a href="#">Sign in</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
