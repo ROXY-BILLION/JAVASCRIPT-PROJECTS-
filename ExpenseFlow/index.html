@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseFlow | Expense Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-icon">$</div>
+
+                <div>
+                    <h1>ExpenseFlow</h1>
+                    <p>Track your spending. Stay in control.</p>
+                </div>
+            </div>
+
+            <div class="date-label">
+                <span>Current period</span>
+                <strong>October 2026</strong>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="hero-card">
+                <div class="hero-content">
+                    <span class="eyebrow">TOTAL SPENT</span>
+                    <h2 id="totalSpent">$0.00</h2>
+                    <p>Your spending overview for this period</p>
+                </div>
+
+                <div class="hero-icon">
+                    $
+                </div>
+            </section>
+
+            <section class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon expenses-icon">#</div>
+
+                    <div>
+                        <span>Total Expenses</span>
+                        <strong id="expenseCount">0</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon spent-icon">$</div>
+
+                    <div>
+                        <span>Total Spent</span>
+                        <strong id="statTotal">$0.00</strong>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon average-icon">↗</div>
+
+                    <div>
+                        <span>Average Expense</span>
+                        <strong id="averageExpense">$0.00</strong>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="dashboard-grid">
+
+                <div class="form-panel">
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-label">NEW TRANSACTION</span>
+                            <h2>Add Expense</h2>
+                        </div>
+
+                        <div class="plus-icon">+</div>
+                    </div>
+
+                    <form id="expenseForm">
+
+                        <div class="form-group">
+                            <label for="expenseName">Expense Name</label>
+                            <input
+                                type="text"
+                                id="expenseName"
+                                placeholder="e.g. Grocery shopping"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+
+                                <div class="amount-input">
+                                    <span>$</span>
+
+                                    <input
+                                        type="number"
+                                        id="amount"
+                                        placeholder="0.00"
+                                        min="0.01"
+                                        step="0.01"
+                                        required
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category">Category</label>
+
+                                <select id="category" required>
+                                    <option value="">Select category</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Transport">Transport</option>
+                                    <option value="Shopping">Shopping</option>
+                                    <option value="Bills">Bills</option>
+                                    <option value="Entertainment">Entertainment</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Date</label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="add-button">
+                            <span>+</span>
+                            Add Expense
+                        </button>
+
+                    </form>
+                </div>
+
+                <div class="expenses-panel">
+
+                    <div class="section-heading">
+                        <div>
+                            <span class="section-label">TRANSACTIONS</span>
+                            <h2>Recent Expenses</h2>
+                        </div>
+
+                        <span class="transaction-count" id="transactionCount">
+                            0
+                        </span>
+                    </div>
+
+                    <div id="expenseList" class="expense-list"></div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>ExpenseFlow <span>•</span> Personal Expense Tracker</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
